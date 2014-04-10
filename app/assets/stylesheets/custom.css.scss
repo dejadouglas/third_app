@@ -30,21 +30,21 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	font-size: 3em;
 	letter-spacing: -2px;
-	margin-bottom:30px
-	text-align:center;
+	margin-bottom:30px;
+	text-align: center;
 	}
 
 h2{
 	font-size: 3em;
 	letter-spacing: -2px;
-	margin-bottom:30px
-	text-align:center;
+	margin-bottom:30px;
+	text-align: center;
 	color: #999;
 }
 
 p {
 	font-size: 1.1em;
-	line-height: 1./em;
+	line-height: 1em;
 }
 
 #logo {
@@ -54,4 +54,39 @@ p {
 	color: #111;
 	text-transform: uppercase;
 	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#logo:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* footer */
+
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #999;
+}
+
+footer a {
+	color: #555;
+}
+
+footer a {
+	color: #777;
+}
+
+footer small {
+	 float: right;
+	 list-style: none;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 10px;
 }
