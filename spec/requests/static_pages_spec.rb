@@ -1,48 +1,32 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+
+subject { page}
+
   describe "Home page" do
-    it "should have the content Sample App" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      pge.should have_selector("h1", :text => 'Sample App')
-    end
-    it "should have a title" do
-      visit '/static_pages/home'
-      pge.should have_selector("title", :text => 'Home Page')
-    end
+before{visit root_path}
+
+    it { should have_selector("h1", text: => 'Third App') }
+    it { should have_selector("title", :text => 'Home Page') }
   end
  describe "Help page" do
-    it "should have the content Help Page" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/help'
-      pge.should have_content("h1", :text => 'Help Page')
-    end
-     it "should have a title" do
-      visit '/static_pages/home'
-      pge.should have_selector("title", :text => 'Home Page')
-    end
-  end
+ before {visit help_path}
+
+    it { should have_selector("h1", text:'Third App')} 
+    it { should have_selector("title", text:'Help App')}  
+end
    describe "About Us page" do
-    it "should have the content About us" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/about'
-      pge.should have_content("h1", :text => 'About Us')
-    end
-     it "should have a title" do
-      visit '/static_pages/about'
-      pge.should have_selector("title", :text => 'About Page')
-    end
-  end
+   before {vist about_path}
+
+    it { should have_selector("h1", text:'Third App')}
+    it { should have_selector("title", text:'About Page')}  
+     end
      describe "Contact page" do
-    it "should have the content Contact us" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/about'
-      pge.should have_content("h1", :text => 'About Us')
-    end
-     it "should have a title" do
-      visit '/static_pages/about'
-      pge.should have_selector("title", :text => 'About Page')
-    enddddd
+     before {visit contact_path}
+
+      it { should have_selector("h1", text:'Third App')} 
+      it { should have_selector("title", text:'Contact Page')} 
   end
+
 end
